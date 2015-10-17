@@ -108,22 +108,24 @@
 
 
 \section{Einführung}
-	Bei dem Versuch "`Beschleunigung von Autos an der schiefen Ebene"' wurde ein Wagen auf einer geneigten Rollbahn 
+	Bei dem Versuch "`Beschleunigung von Autos an der schiefen Ebene"' wurde ein Wagen auf einer geneigten Rollbahn
 	beschleunigt und die Zeit gemessen, die der Wagen für eine bestimmte Strecke $s$ benötigt.\\
 	Ziel des Versuches ist das Diagramm $t(\alpha)$ und die Endgeschwindigkeit des Wagens $v_e$.\\
-	Der  Versuch "`Beschleunigung von Autos an der schiefen Ebene"' kommt aus der Kinematik, der Lehre der Bewegung 
-	von Punkten und Körpern im Raum, beschrieben durch die Größen Position, Geschwindigkeit und Beschleunigung, ohne die 
+	Der  Versuch "`Beschleunigung von Autos an der schiefen Ebene"' kommt aus der Kinematik, der Lehre der Bewegung
+	von Punkten und Körpern im Raum, beschrieben durch die Größen Position, Geschwindigkeit und Beschleunigung, ohne die
 	Ursachen der Bewegung (Kräfte) zu betrachten.
 
 \subsection{Benötigten Formeln}
 	Beschleunigte Bewegung:
 		\begin{align*}
-			v &= a\cdot t \\
-			s &= \frac{1}{2} \cdot a \cdot t^2
+			\overline{v} &= \frac{s}{t}\\
+			s &= \frac{1}{2} \cdot a \cdot t^2\\
+			v_e &= a\cdot t \\
+			v_e &= 2 \cdot \overline{v}
 		\end{align*}
 	Arithmetischer Mittelwert:
 		\begin{align*}
-			\overline{t} &= \frac{1}{n} \sum \limits_{i=1}^n t_i 
+			\overline{t} &= \frac{1}{n} \sum \limits_{i=1}^n t_i
 		\end{align*}
 	Standardabweichung:
 		\begin{align*}
@@ -148,9 +150,9 @@
 	\end{itemize}
 
 \subsection{Aufbau}
-	Eine Rollbahn wird durch das einseitige Unterlegen von verschieden großen Holzklötzen in eine Schräglage gebracht, 
-	wie in Abbildung \ref{fig:skizze_auto_schiefe_ebene} zu sehen ist. Ein Wagen wird am oberen Ende der Rollbahn fixiert, 
-	sodass er, nachdem er losgelassen wurde, ohne eine Anfangsgeschwindigkeit beschleunigt werden kann. Diese 
+	Eine Rollbahn wird durch das einseitige Unterlegen von verschieden großen Holzklötzen in eine Schräglage gebracht,
+	wie in Abbildung \ref{fig:skizze_auto_schiefe_ebene} zu sehen ist. Ein Wagen wird am oberen Ende der Rollbahn fixiert,
+	sodass er, nachdem er losgelassen wurde, ohne eine Anfangsgeschwindigkeit beschleunigt werden kann. Diese
 	Beschleunigung erfährt der Wagen ausschließlich durch der Erdbeschleunigung, die $9,81\frac{m}{s²}$ beträgt.
 	\begin{figure}[h]
 		\centering
@@ -161,28 +163,28 @@
 
 \newpage
 \subsection{Durchführung}
-	Nachdem der Versuch aufgebaut wurde, wurde ein Wagen am oberen Ende der Rollbahn losgelassen, und die Zeit 
+	Nachdem der Versuch aufgebaut wurde, wurde ein Wagen am oberen Ende der Rollbahn losgelassen, und die Zeit
 	$t$ die er für die Abfahrt der Strecke $s=\SI{1.37}{\metre}$ benötigt gestoppt. Zusätzlich wird noch die Zeit $t^{\ast}$ für die halbe Strecke
-	$s_{1/2}=\SI{0.61}{\metre}$ genommen. Für $t$ und $t^{\ast}$ werden jeweils drei Messungen genommen, der Versuch wird anschließend weitere 
-	neun mal durchgeführt, wobei der Winkel $\alpha$ stetig verändert wird. Insgesamt hat man nun zehn Werte-Tripel für 
+	$s_{1/2}$ genommen. Für $t$ und $t^{\ast}$ werden jeweils drei Messungen genommen, der Versuch wird anschließend weitere
+	neun mal durchgeführt, wobei der Winkel $\alpha$ stetig verändert wird. Insgesamt hat man nun zehn Werte-Tripel für
 	$t$ und $t^{\ast}$.
 
 
 \section{Messwerte}
-	\begin{table}[h]
+	\begin{table}[h!]
 	\centering
-		\begin{tabular}{c|c|c|c|c|c|c|c|c|c}
-			Messung 	& $\alpha$			& $t^{\ast}_1$ 		& $t^{\ast}_2$		& $t^{\ast}_3$ 		&$\overline{t^{\ast}}$	& $t_1$ 				& $t_2$ 			& $t_3$ 			&$\overline{t}$	\\ \hline
-				1 	& \ang{1.56}		& \SI{2.8}{\second} 	&\SI{0.0}{\second}	&\SI{0.0}{\second}	&\SI{0.00}{\second}		& \SI{3.1}{\second}		& \SI{3.2}{\second}	& \SI{3.0}{\second}	&\SI{3.10}{\second}\\ \hline
-				2	& \ang{2.21}		& \SI{2.0}{\second} 	&\SI{1.7}{\second}	&\SI{1.6}{\second}	&\SI{1.77}{\second}		& \SI{2.5}{\second}		& \SI{2.6}{\second}	& \SI{2.8}{\second}	&\SI{2.63}{\second}\\ \hline
-				3	& \ang{2.37}		& \SI{2.0}{\second} 	&\SI{2.3}{\second}	&\SI{2.3}{\second}	&\SI{2.20}{\second}		& \SI{2.6}{\second}		& \SI{2.6}{\second}	& \SI{2.5}{\second}	&\SI{3.57}{\second}\\ \hline
-				4 	& \ang{2.62}		& \SI{1.6}{\second} 	&\SI{1.6}{\second}	&\SI{1.5}{\second}	&\SI{1.57}{\second}		& \SI{2.3}{\second}		& \SI{2.5}{\second}	& \SI{2.3}{\second}	&\SI{2.37}{\second}\\ \hline
-				5 	& \ang{2.87}		& \SI{1.6}{\second} 	&\SI{1.5}{\second}	&\SI{1.6}{\second}	&\SI{1.57}{\second}		& \SI{2.4}{\second}		& \SI{2.3}{\second}	& \SI{2.4}{\second}	&\SI{2.33}{\second}\\ \hline
-				6 	& \ang{3.52}		& \SI{1.2}{\second} 	&\SI{1.4}{\second}	&\SI{1.4}{\second}	&\SI{1.33}{\second}		& \SI{2.1}{\second}		& \SI{2.2}{\second}	& \SI{2.2}{\second}	&\SI{2.17}{\second}\\ \hline
-				7 	& \ang{3.69}		& \SI{1.3}{\second}	&\SI{1.4}{\second}	&\SI{1.3}{\second}	&\SI{1.33}{\second}		& \SI{2.0}{\second}		& \SI{2.0}{\second}	& \SI{2.2}{\second}	&\SI{2.07}{\second}\\ \hline
-				8 	& \ang{4.01}		& \SI{1.5}{\second}	&\SI{1.3}{\second}	&\SI{1.4}{\second}	&\SI{1.40}{\second}		& \SI{2.1}{\second}		& \SI{2.0}{\second}	& \SI{2.0}{\second}	&\SI{2.03}{\second}\\ \hline
-				9 	& \ang{4.92}		& \SI{1.1}{\second}	&\SI{1.0}{\second}	&\SI{1.1}{\second}	&\SI{1,07}{\second}		& \SI{1.3}{\second}		& \SI{1.5}{\second}	& \SI{1.7}{\second}	&\SI{1.50}{\second}\\ \hline
-				10	& \ang{5.74}		& \SI{1.1}{\second}	&\SI{1.0}{\second}	&\SI{0.9}{\second}	&\SI{1.00}{\second}		& \SI{1.4}{\second}		& \SI{1.5}{\second}	& \SI{1.5}{\second} 	&\SI{1.47}{\second}
+		\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+			Messung 	& $\alpha$			& $t^{\ast}_1$ 		& $t^{\ast}_2$		& $t^{\ast}_3$ 		&$\overline{t^{\ast}}$	& $t_1$ 				& $t_2$ 			& $t_3$ 			&$\overline{t}$		&$\sigma_{m_t}$	\\ \hline
+				1 	& \ang{1.56}		& \SI{2.8}{\second} 	&\SI{0.0}{\second}	&\SI{0.0}{\second}	&\SI{0.00}{\second}		& \SI{3.1}{\second}		& \SI{3.2}{\second}	& \SI{3.0}{\second}	&\SI{3.10}{\second}	&\num{0.09}		\\ \hline
+				2	& \ang{2.21}		& \SI{2.0}{\second} 	&\SI{1.7}{\second}	&\SI{1.6}{\second}	&\SI{1.77}{\second}		& \SI{2.5}{\second}		& \SI{2.6}{\second}	& \SI{2.8}{\second}	&\SI{2.63}{\second}	&\num{0.13}		\\ \hline
+				3	& \ang{2.37}		& \SI{2.0}{\second} 	&\SI{2.3}{\second}	&\SI{2.3}{\second}	&\SI{2.20}{\second}		& \SI{2.6}{\second}		& \SI{2.6}{\second}	& \SI{2.5}{\second}	&\SI{2.57}{\second}	&\num{0.05}		\\ \hline
+				4 	& \ang{2.62}		& \SI{1.6}{\second} 	&\SI{1.6}{\second}	&\SI{1.5}{\second}	&\SI{1.57}{\second}		& \SI{2.3}{\second}		& \SI{2.5}{\second}	& \SI{2.3}{\second}	&\SI{2.37}{\second}	&\num{0.10}		\\ \hline
+				5 	& \ang{2.87}		& \SI{1.6}{\second} 	&\SI{1.5}{\second}	&\SI{1.6}{\second}	&\SI{1.57}{\second}		& \SI{2.4}{\second}		& \SI{2.3}{\second}	& \SI{2.4}{\second}	&\SI{2.33}{\second}	&\num{0.05}		\\ \hline
+				6 	& \ang{3.52}		& \SI{1.2}{\second} 	&\SI{1.4}{\second}	&\SI{1.4}{\second}	&\SI{1.33}{\second}		& \SI{2.1}{\second}		& \SI{2.2}{\second}	& \SI{2.2}{\second}	&\SI{2.17}{\second}	&\num{0.05}		\\ \hline
+				7 	& \ang{3.69}		& \SI{1.3}{\second}	&\SI{1.4}{\second}	&\SI{1.3}{\second}	&\SI{1.33}{\second}		& \SI{2.0}{\second}		& \SI{2.0}{\second}	& \SI{2.2}{\second}	&\SI{2.07}{\second}	&\num{0.10}		\\ \hline
+				8 	& \ang{4.01}		& \SI{1.5}{\second}	&\SI{1.3}{\second}	&\SI{1.4}{\second}	&\SI{1.40}{\second}		& \SI{2.1}{\second}		& \SI{2.0}{\second}	& \SI{2.0}{\second}	&\SI{2.03}{\second}	&\num{0.05}		\\ \hline
+				9 	& \ang{4.92}		& \SI{1.1}{\second}	&\SI{1.0}{\second}	&\SI{1.1}{\second}	&\SI{1,07}{\second}		& \SI{1.3}{\second}		& \SI{1.5}{\second}	& \SI{1.7}{\second}	&\SI{1.50}{\second}	&\num{0.17}		\\ \hline
+				10	& \ang{5.74}		& \SI{1.1}{\second}	&\SI{1.0}{\second}	&\SI{0.9}{\second}	&\SI{1.00}{\second}		& \SI{1.4}{\second}		& \SI{1.5}{\second}	& \SI{1.5}{\second} 	&\SI{1.47}{\second}	&\num{0.05}
 		\end{tabular}
 	\caption{Messwerte}
 	\label{tab:Messwerte}
@@ -191,166 +193,232 @@
 
 
 \section{Auswertung}
-\subsection{Einpuls-Einweggleichrichterschaltung}
-	\begin{figure}[h]
-	\begin{tikzpicture}[domain=0:3.8]
-		\begin{axis}[
-			samples=100,
-			domain=0:10, xmax=4.5,
-			restrict y to domain=-31:31,
-			axis lines=left,
-			axis lines=middle,
-			y=1cm/5.5,
-			x=1cm*2.5,
-			grid=both,
-			xtick={0,...,4.5},
-		    	ytick={-30,-20,...,30},
-		    	compat=newest,
-		    	x label style={at={(axis description cs:0.5,-0.04)},anchor=north},
-			y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},	
-			xlabel={Zeit $t$ in ms},
-			ylabel={Spannung $U$ in V}
-			]  
-			\addplot [red,thick] {29*sin(3.141*\x r)} ;
-			\addplot [blue,thick] {21};
-			\addplot [white] {31};
-			\addplot [white] {-31};
-		\end{axis}	
+	\begin{figure}[h!]
+	\begin{tikzpicture}[xscale=2,yscale=3]
+		% Achsen
+		\draw[->] (-0.25,0) -- (7,0) node[below right] {$\alpha$ in \si{\degree}};
+		\draw[->] (0,-0.5/3) -- (0,4) node[left] {$t$ in \si{\second}};
+		% Achsbeschriftung
+		\foreach \x in {0.5,1,...,6.5} \draw (\x,0.05) -- (\x,-0.05) node [below] {\x};
+		\foreach \y in {0.5,1,...,3.5} \draw (0.1,\y) -- (-0.1,\y) node [left] {\y};
+		% Messpunkte
+		\node (1) at (1.56,3.10) {\textsf{x}};
+		\node (2) at (2.21,2.63) {\textsf{x}};
+		\node (3) at (2.37,2.57) {\textsf{x}};
+		\node (4) at (2.62,2.37) {\textsf{x}};
+		\node (5) at (2.87,2.33) {\textsf{x}};
+		\node (6) at (3.52,2.17) {\textsf{x}};
+		\node (7) at (3.69,2.07) {\textsf{x}};
+		\node (8) at (4.01,2.03) {\textsf{x}};
+		\node (9) at (4.92,1.50) {\textsf{x}};
+		\node (10) at (5.74,1.47) {\textsf{x}};
+		% Funktion
+		\draw[blue, samples=500, domain=1:7] plot (\x, {sqrt((2*1.25)/(sin(\x )*9.7))});
+		%\draw[orange, samples=500, domain=1.15:7] plot (\x, {1.042240+3.447874 *1/ (\x )});
+		%\draw[red, samples=500, domain=1:7] plot (\x, {sqrt((2*1.37)/(sin(\x )*9.81))});
+		%\draw[green, samples=500, domain=1:7] plot (\x, {0.034731*\x^4-0.509419*\x^3+2.689999*\x^2-6.416893*\x+8.305943});
+		%\draw[teal, samples=500, domain=0.1:7] plot (\x, {12.506717/(1+2.701677*e^(0.311453*\x))+0.712898});
+		%\draw[black, samples=500, domain=1:7] plot (\x, {1.124601 + 2.936135 * 1/\x});
+		%\draw[lime, samples=500, domain=1:7] plot (\x, {-0.012945*\x^3+0.184344*\x^2-1.164916*\x+4.475348});
 	\end{tikzpicture}
-	\caption{test}
-	\label{fig:tset} 
+	\caption{Diagramm: $t(\alpha)$}
+	\label{fig:Diagramm}
 	\end{figure}
-	Die sinusförmige Wechselspannung (rot) besitzt einen Spitzenwert von $\hat{u} = \SI{29}{\volt}$. 
-	Der dazugehörige Effektivwert (blau) liegt bei $U_\text{eff} = \SI{21}{\volt}$. 
-	Dieser gemessene Wert lässt sich durch die Formel $U_\text{eff}=\frac{\hat{u}}{\sqrt{2}}$ auch berechnen :
-	$U_\text{eff}=\frac{\SI{29}{\volt}}{\sqrt{2}} = \SI{20,5}{\volt} \approx \SI{21}{\volt}$.
 
-\newpage
-	\noindent
-	\begin{tikzpicture}[domain=0:3.8][B]
-		\begin{axis}[
-			samples=100,
-			domain=0:10, xmax=4.5,
-			restrict y to domain=0:31,
-			axis lines=left,
-			axis lines=middle,
-			y=1cm/5.5,
-			x=1cm*2.5,
-			grid=both,
-			xtick={0,...,4.5},
-		    	ytick={0,10,...,30},
-		    	compat=newest,
-		    	x label style={at={(axis description cs:0.5,-0.1)},anchor=north},
-			y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},	
-			xlabel={Zeit $t$ in ms},
-			ylabel={Spannung $U$ in V}
-			]  
-			\addplot [green,thick] {28*sin(3.141*\x r)} ;
-			\addplot [yellow,thick] {14};
-			\addplot [white] {31};
-			\draw [green,thick] (71.3pt,0pt)-- (142.6pt,0pt);
-			\draw [green,thick] (213.9pt,0pt)-- (285.2pt,0pt);
-		\end{axis}
-	\end{tikzpicture}  \\
-	Die pulsierende Gleichpannung (grün) besitzt einen Spitzenwert von $\hat{U} = \SI{28}{\volt}$. 
-	Der dazugehörige Effektievwert (blau) liegt bei $U_\text{eff} = \SI{14}{\volt}$. 
-	Dieser gemessene Wert lässt sich durch die Formel $U_\text{eff}=\frac{\hat{u}}{2}$ berechnen :
-	$U_\text{eff}=\frac{\SI{28}{\volt}}{2} = \SI{14}{\volt}$.\\
-	Der auftretende Verlust am Spitzenwert von 
-	$\hat{u}_\text{ges} - \hat{U}_\text{d} = \SI{29}{\volt} -  \SI{28}{\volt} = \SI{1}{\volt}$ lässt sich durch die 
-	Schleusenspannung $U_\text{S}$ einer Diode erklären. Erst ab \SI{0,6}{\volt} bis \SI{0,7}{\volt} 
-	nimmt der Stomfluss stark zu, ein nennenswerter Strom fließt allerdings schon ab etwa \SI{0,4}{\volt}.\\
-	Die Ausgabe des Oszilloskops ist in Abbildung \ref{oszi} zu sehen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\begin{tikzpicture}
+%\begin{axis}[
+%    ymin=-5,
+%    ymax=5,
+%    xmin=-10.1,
+%    xmax=10.1,
+%    axis on top=true,
+%    axis x line=middle,
+%    axis y line=middle,
+%    ]
+%    \addplot [samples=700] {1.042240+3.447874 *1/\x};
+%    %\addplot [             samples=100, domain=2.01:10] {1/(x-2) + 3};
+%\end{axis}
+%\end{tikzpicture}
+
+
+%\subsection{Einpuls-Einweggleichrichterschaltung}
+%	 \begin{figure}[h]
+%	 \begin{tikzpicture}[domain=0:3.8]
+%	 	 \begin{axis}[
+%	 	 	 samples=100,
+%	 	 	 domain=0:10, xmax=4.5,
+%	 	 	 restrict y to domain=-31:31,
+%	 	 	 axis lines=left,
+%	 	 	 axis lines=middle,
+%	 	 	 y=1cm/5.5,
+%	 	 	 x=1cm*2.5,
+%	 	 	 grid=both,
+%	 	 	 xtick={0,...,4.5},
+%	 	     	 ytick={-30,-20,...,30},
+%	 	     	 compat=newest,
+%	 	     	 x label style={at={(axis description cs:0.5,-0.04)},anchor=north},
+%	 	 	 y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},
+%	 	 	 xlabel={Zeit $t$ in ms},
+%	 	 	 ylabel={Spannung $U$ in V}
+%	 	 	 ]
+%	 	 	 \addplot [red,thick] {1.042240+3.447874 *1/\x ;
+%	 	 	 \addplot [blue,thick] {21};
+%	 	 	 \addplot [white] {31};
+%	 	 	 \addplot [white] {-31};
+%	 	 \end{axis}
+%	 \end{tikzpicture}
+%	 \caption{test}
+%	 \label{fig:test}
+%	 \end{figure}
+%	 Die sinusförmige Wechselspannung (rot) besitzt einen Spitzenwert von $\hat{u} = \SI{29}{\volt}$.
+%	 Der dazugehörige Effektivwert (blau) liegt bei $U_\text{eff} = \SI{21}{\volt}$.
+%	 Dieser gemessene Wert lässt sich durch die Formel $U_\text{eff}=\frac{\hat{u}}{\sqrt{2}}$ auch berechnen :
+%	 $U_\text{eff}=\frac{\SI{29}{\volt}}{\sqrt{2}} = \SI{20,5}{\volt} \approx \SI{21}{\volt}$.
+%
+%\newpage
+%	 \noindent
+%	 \begin{tikzpicture}[domain=0:3.8][B]
+%	 	 \begin{axis}[
+%	 	 	 samples=100,
+%	 	 	 domain=0:10, xmax=4.5,
+%	 	 	 restrict y to domain=0:31,
+%	 	 	 axis lines=left,
+%	 	 	 axis lines=middle,
+%	 	 	 y=1cm/5.5,
+%	 	 	 x=1cm*2.5,
+%	 	 	 grid=both,
+%	 	 	 xtick={0,...,4.5},
+%	 	     	 ytick={0,10,...,30},
+%	 	     	 compat=newest,
+%	 	     	 x label style={at={(axis description cs:0.5,-0.1)},anchor=north},
+%	 	 	 y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},
+%	 	 	 xlabel={Zeit $t$ in ms},
+%	 	 	 ylabel={Spannung $U$ in V}
+%	 	 	 ]
+%	 	 	 \addplot [green,thick] {28*sin(3.141*\x r)} ;
+%	 	 	 \addplot [yellow,thick] {14};
+%	 	 	 \addplot [white] {31};
+%	 	 	 \draw [green,thick] (71.3pt,0pt)-- (142.6pt,0pt);
+%	 	 	 \draw [green,thick] (213.9pt,0pt)-- (285.2pt,0pt);
+%	 	 \end{axis}
+%	 \end{tikzpicture}  \\
+%	 Die pulsierende Gleichpannung (grün) besitzt einen Spitzenwert von $\hat{U} = \SI{28}{\volt}$.
+%	 Der dazugehörige Effektievwert (blau) liegt bei $U_\text{eff} = \SI{14}{\volt}$.
+%	 Dieser gemessene Wert lässt sich durch die Formel $U_\text{eff}=\frac{\hat{u}}{2}$ berechnen :
+%	 $U_\text{eff}=\frac{\SI{28}{\volt}}{2} = \SI{14}{\volt}$.\\
+%	 Der auftretende Verlust am Spitzenwert von
+%	 $\hat{u}_\text{ges} - \hat{U}_\text{d} = \SI{29}{\volt} -  \SI{28}{\volt} = \SI{1}{\volt}$ lässt sich durch die
+%	 Schleusenspannung $U_\text{S}$ einer Diode erklären. Erst ab \SI{0,6}{\volt} bis \SI{0,7}{\volt}
+%	 nimmt der Stomfluss stark zu, ein nennenswerter Strom fließt allerdings schon ab etwa \SI{0,4}{\volt}.\\
+%	 Die Ausgabe des Oszilloskops ist in Abbildung \ref{oszi} zu sehen.
 %\FloatBarrier
 %	\begin{figure}[b]
 %		\centering
 %		\rotatebox[origin=c]{-90}{\includegraphics[width=0.3\textwidth]{oszi.eps}}
 %		\caption{Schaubild Oszilloskop}
 %		\label{oszi}
-%	\end{figure} 
-\FloatBarrier
-
-\newpage
-\noindent
-\subsection{Zweipuls-Brücken-Gleichrichterschaltung}
-	Die Nachteile einer Einpuls-Einweggleichrichterschaltung sind die entstehende Brummspannung, sowie ein schlechter
-	Wirkungsgrad. Um diese Nachteile zu vermeiden wird meist eine Zweipuls-Brücken-Gleichrichterschaltung eingesetzt. 
-	Bei dieser Schaltung werden vier Dioden benötigt, die wie in Abbildung \ref{fig:skizze_schaltung_2} zu sehen ist, 
-	aufgebaut werden. Mit dieser Schaltung werden die negativen Halbwellen nicht abgeschnitten, sondern ins Positive 
-	übertragen. Da die negativen Halbwellen, im Vergleich zur Einpuls-Einweggleichrichterschaltung, nicht abgeschnitten werden
-	sondern im Positiven erhalten bleiben, ist der Wirkungsgrad deutlich besser und es gibt keine Totphasen.
+%	\end{figure}
+%\FloatBarrier
+%
+%\newpage
+%\noindent
+%\subsection{Zweipuls-Brücken-Gleichrichterschaltung}
+%	 Die Nachteile einer Einpuls-Einweggleichrichterschaltung sind die entstehende Brummspannung, sowie ein schlechter
+%	 Wirkungsgrad. Um diese Nachteile zu vermeiden wird meist eine Zweipuls-Brücken-Gleichrichterschaltung eingesetzt.
+%	 Bei dieser Schaltung werden vier Dioden benötigt, die wie in Abbildung \ref{fig:skizze_schaltung_2} zu sehen ist,
+%	 aufgebaut werden. Mit dieser Schaltung werden die negativen Halbwellen nicht abgeschnitten, sondern ins Positive
+%	 übertragen. Da die negativen Halbwellen, im Vergleich zur Einpuls-Einweggleichrichterschaltung, nicht abgeschnitten werden
+%	 sondern im Positiven erhalten bleiben, ist der Wirkungsgrad deutlich besser und es gibt keine Totphasen.
 %	\begin{figure}[h!]
 %		\centering
 %		\input{skizze_schaltung_2}
 %		\caption{Skizze der Zweipuls-Brücken-Gleichrichterschaltung}
 %		\label{fig:skizze_schaltung_2}
 %	\end{figure}
-	\FloatBarrier
-
-\newpage	
-	\begin{tikzpicture}[domain=0:3.8]
-		\begin{axis}[
-			samples=100,
-			domain=0:10, xmax=4.5,
-			restrict y to domain=-31:31,
-			axis lines=left,
-			axis lines=middle,
-			y=1cm/5.5,
-			x=1cm*2.5,
-			grid=both,
-			xtick={0,...,4.5},
-		    	ytick={-30,-20,...,30},
-		    	compat=newest,
-		    	x label style={at={(axis description cs:0.5,-0.04)},anchor=north},
-			y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},	
-			xlabel={Zeit $t$ in ms},
-			ylabel={Spannung $U$ in V}
-			]  
-			\addplot [red,thick] {29*sin(pi*\x r)} ;
-			\addplot [blue,thick] {21};
-			\addplot [white] {31};
-			\addplot [white] {-31};
-		\end{axis}	
-	\end{tikzpicture}\\  
-	Bei der Spannung $u_{ges}$ (rot) und der Effektivspannung $U_{\text{ges}_\text{eff}}$ (blau) gibt es bei der 
-	Zweipuls-Brücken-Gleichrichterschaltung keinen Unterschied zur Einpuls-Einweggleich-\\richterschaltung. Der Unterschied 
-	zwischen den beiden Schaltungen ist erst bei den Spannungen $U_{\text{d}}$ (grün) und $U_{\text{d}_\text{eff}}$ (gelb)
-	sichtbar. Hier ist nun, anstelle der ursprünglichen \SI{0}{\volt} Phase, eine zweite, positive, sinusförmige Halbwelle vorhanden.
-	
-	
+%	 \FloatBarrier
+%
 %\newpage
-	\begin{tikzpicture}[domain=0:3.8][B]
-		\begin{axis}[
-			samples=100,
-			domain=0:10, xmax=4.5,
-			restrict y to domain=0:31,
-			axis lines=left,
-			axis lines=middle,
-			y=1cm/5.5,
-			x=1cm*2.5,
-			grid=both,
-			xtick={0,...,4.5},
-		    	ytick={0,10,...,30},
-		    	compat=newest,
-		    	x label style={at={(axis description cs:0.5,-0.1)},anchor=north},
-			y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},	
-			xlabel={Zeit $t$ in ms},
-			ylabel={Spannung $U$ in V}
-			]  
-			\addplot [green,thick] {28*sin(3.141*\x r)} ;
-			\addplot [green,thick] {28*sin(3.141*(\x+3) r)} ;
-			\addplot [yellow,thick] {20.506};
-			\addplot [white] {31};
-		\end{axis}	
-	\end{tikzpicture}  
+%	 \begin{tikzpicture}[domain=0:3.8]
+%	 	 \begin{axis}[
+%	 	 	 samples=100,
+%	 	 	 domain=0:10, xmax=4.5,
+%	 	 	 restrict y to domain=-31:31,
+%	 	 	 axis lines=left,
+%	 	 	 axis lines=middle,
+%	 	 	 y=1cm/5.5,
+%	 	 	 x=1cm*2.5,
+%	 	 	 grid=both,
+%	 	 	 xtick={0,...,4.5},
+%	 	     	 ytick={-30,-20,...,30},
+%	 	     	 compat=newest,
+%	 	     	 x label style={at={(axis description cs:0.5,-0.04)},anchor=north},
+%	 	 	 y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},
+%	 	 	 xlabel={Zeit $t$ in ms},
+%	 	 	 ylabel={Spannung $U$ in V}
+%	 	 	 ]
+%	 	 	 \addplot [red,thick] {29*sin(pi*\x r)} ;
+%	 	 	 \addplot [blue,thick] {21};
+%	 	 	 \addplot [white] {31};
+%	 	 	 \addplot [white] {-31};
+%	 	 \end{axis}
+%	 \end{tikzpicture}\\
+%	 Bei der Spannung $u_{ges}$ (rot) und der Effektivspannung $U_{\text{ges}_\text{eff}}$ (blau) gibt es bei der
+%	 Zweipuls-Brücken-Gleichrichterschaltung keinen Unterschied zur Einpuls-Einweggleich-\\richterschaltung. Der Unterschied
+%	 zwischen den beiden Schaltungen ist erst bei den Spannungen $U_{\text{d}}$ (grün) und $U_{\text{d}_\text{eff}}$ (gelb)
+%	 sichtbar. Hier ist nun, anstelle der ursprünglichen \SI{0}{\volt} Phase, eine zweite, positive, sinusförmige Halbwelle vorhanden.
+%
+%
+%\newpage
+%	 \begin{tikzpicture}[domain=0:3.8][B]
+%	 	 \begin{axis}[
+%	 	 	 samples=100,
+%	 	 	 domain=0:10, xmax=4.5,
+%	 	 	 restrict y to domain=0:31,
+%	 	 	 axis lines=left,
+%	 	 	 axis lines=middle,
+%	 	 	 y=1cm/5.5,
+%	 	 	 x=1cm*2.5,
+%	 	 	 grid=both,
+%	 	 	 xtick={0,...,4.5},
+%	 	     	 ytick={0,10,...,30},
+%	 	     	 compat=newest,
+%	 	     	 x label style={at={(axis description cs:0.5,-0.1)},anchor=north},
+%	 	 	 y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},
+%	 	 	 xlabel={Zeit $t$ in ms},
+%	 	 	 ylabel={Spannung $U$ in V}
+%	 	 	 ]
+%	 	 	 \addplot [green,thick] {28*sin(3.141*\x r)} ;
+%	 	 	 \addplot [green,thick] {28*sin(3.141*(\x+3) r)} ;
+%	 	 	 \addplot [yellow,thick] {20.506};
+%	 	 	 \addplot [white] {31};
+%	 	 \end{axis}
+%	 \end{tikzpicture}
 
 \newpage
 \section{Quellen}
 	\begin{itemize}
-		\item www.lern-online.net/physik/mechanik/kinematik\\Upload: 21.09.2015 10:59 Uhr, Abgerufen: 17.10.2015 13:39 Uhr 
+		\item www.lern-online.net/physik/mechanik/kinematik\\Upload: 21.09.2015 10:59 Uhr, Abgerufen: 17.10.2015 13:39 Uhr
 		\item www.fersch.de/pdfdoc/Physik.pdf\\Upload: 20. August 2015, Abgerufen: 17.10.2015 13:17 Uhr
 	\end{itemize}
-	
+
 \end{document}
 
 
