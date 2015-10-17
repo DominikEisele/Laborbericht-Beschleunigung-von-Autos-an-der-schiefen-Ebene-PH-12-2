@@ -175,7 +175,7 @@
 	\centering
 		\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
 			Messung 	& $\alpha$			& $t^{\ast}_1$ 		& $t^{\ast}_2$		& $t^{\ast}_3$ 		&$\overline{t^{\ast}}$	& $t_1$ 				& $t_2$ 			& $t_3$ 			&$\overline{t}$		&$\sigma_{m_t}$	\\ \hline
-				1 	& \ang{1.56}		& \SI{2.8}{\second} 	&\SI{0.0}{\second}	&\SI{0.0}{\second}	&\SI{0.00}{\second}		& \SI{3.1}{\second}		& \SI{3.2}{\second}	& \SI{3.0}{\second}	&\SI{3.10}{\second}	&\num{0.09}		\\ \hline
+				1 	& \ang{1.56}		& \SI{2.8}{\second} 	&\SI{2.5}{\second}	&\SI{2.6}{\second}	&\SI{2.63}{\second}		& \SI{3.1}{\second}		& \SI{3.2}{\second}	& \SI{3.0}{\second}	&\SI{3.10}{\second}	&\num{0.09}		\\ \hline
 				2	& \ang{2.21}		& \SI{2.0}{\second} 	&\SI{1.7}{\second}	&\SI{1.6}{\second}	&\SI{1.77}{\second}		& \SI{2.5}{\second}		& \SI{2.6}{\second}	& \SI{2.8}{\second}	&\SI{2.63}{\second}	&\num{0.13}		\\ \hline
 				3	& \ang{2.37}		& \SI{2.0}{\second} 	&\SI{2.3}{\second}	&\SI{2.3}{\second}	&\SI{2.20}{\second}		& \SI{2.6}{\second}		& \SI{2.6}{\second}	& \SI{2.5}{\second}	&\SI{2.57}{\second}	&\num{0.05}		\\ \hline
 				4 	& \ang{2.62}		& \SI{1.6}{\second} 	&\SI{1.6}{\second}	&\SI{1.5}{\second}	&\SI{1.57}{\second}		& \SI{2.3}{\second}		& \SI{2.5}{\second}	& \SI{2.3}{\second}	&\SI{2.37}{\second}	&\num{0.10}		\\ \hline
@@ -193,6 +193,32 @@
 
 
 \section{Auswertung}
+	\subsection{Verhältnis $\frac{t}{t^{\ast}}$}
+	Das Verhältnis $\frac{\overline{t}}{\overline{t^{\ast}}}$ beträgt in Messreihe 1 \num{1.18}.\\
+	Das Verhältnis $\frac{\overline{t}}{\overline{t^{\ast}}}$ beträgt in Messreihe 2 \num{1.49}.\\
+	Das Verhältnis $\frac{\overline{t}}{\overline{t^{\ast}}}$ beträgt in Messreihe 3 \num{1.17}.\\
+	Das Verhältnis $\frac{\overline{t}}{\overline{t^{\ast}}}$ beträgt in Messreihe 4 \num{1.51}.\\
+	Das Verhältnis $\frac{\overline{t}}{\overline{t^{\ast}}}$ beträgt in Messreihe 5 \num{1.48}.\\
+	Das Verhältnis $\frac{\overline{t}}{\overline{t^{\ast}}}$ beträgt in Messreihe 6 \num{1.63}.\\
+	Das Verhältnis $\frac{\overline{t}}{\overline{t^{\ast}}}$ beträgt in Messreihe 7 \num{1.56}.\\
+	Das Verhältnis $\frac{\overline{t}}{\overline{t^{\ast}}}$ beträgt in Messreihe 8 \num{1.45}.\\
+	Das Verhältnis $\frac{\overline{t}}{\overline{t^{\ast}}}$ beträgt in Messreihe 9 \num{1.40}.\\
+	Das Verhältnis $\frac{\overline{t}}{\overline{t^{\ast}}}$ beträgt in Messreihe 10 \num{1.47}.\\
+	Das Durchschnittsverhältnis $\overline{\frac{\overline{t}}{\overline{t^{\ast}}}}$ beträgt \num{1.43}.\\
+	Das theoretische Verhältnis beträgt:
+		\begin{align*}
+			s &= \frac{1}{2} \cdot a \cdot t^2	\\
+			 t &=\sqrt{\frac{2s}{a}}	\\
+			 t^{\ast} &=\sqrt{\frac{2 \cdot \frac{1}{2} \cdot s}{a}} \\
+			 t^{\ast} &= \sqrt{\frac{s}{a}}	\\
+			\frac{t}{t^{\ast}} &= \frac{\sqrt{\frac{2s}{a}}}{\sqrt{\frac{s}{a}}}\\
+			\frac{t}{t^{\ast}} &= \sqrt{2}		\\
+			\frac{t}{t^{\ast}} &\approx \num{1.414}
+		\end{align*}
+
+
+\newpage
+	\subsection{Diagramm $t(\alpha)$}
 	\begin{figure}[h!]
 	\begin{tikzpicture}[xscale=2,yscale=3]
 		% Achsen
@@ -226,191 +252,6 @@
 	\end{figure}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%\begin{tikzpicture}
-%\begin{axis}[
-%    ymin=-5,
-%    ymax=5,
-%    xmin=-10.1,
-%    xmax=10.1,
-%    axis on top=true,
-%    axis x line=middle,
-%    axis y line=middle,
-%    ]
-%    \addplot [samples=700] {1.042240+3.447874 *1/\x};
-%    %\addplot [             samples=100, domain=2.01:10] {1/(x-2) + 3};
-%\end{axis}
-%\end{tikzpicture}
-
-
-%\subsection{Einpuls-Einweggleichrichterschaltung}
-%	 \begin{figure}[h]
-%	 \begin{tikzpicture}[domain=0:3.8]
-%	 	 \begin{axis}[
-%	 	 	 samples=100,
-%	 	 	 domain=0:10, xmax=4.5,
-%	 	 	 restrict y to domain=-31:31,
-%	 	 	 axis lines=left,
-%	 	 	 axis lines=middle,
-%	 	 	 y=1cm/5.5,
-%	 	 	 x=1cm*2.5,
-%	 	 	 grid=both,
-%	 	 	 xtick={0,...,4.5},
-%	 	     	 ytick={-30,-20,...,30},
-%	 	     	 compat=newest,
-%	 	     	 x label style={at={(axis description cs:0.5,-0.04)},anchor=north},
-%	 	 	 y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},
-%	 	 	 xlabel={Zeit $t$ in ms},
-%	 	 	 ylabel={Spannung $U$ in V}
-%	 	 	 ]
-%	 	 	 \addplot [red,thick] {1.042240+3.447874 *1/\x ;
-%	 	 	 \addplot [blue,thick] {21};
-%	 	 	 \addplot [white] {31};
-%	 	 	 \addplot [white] {-31};
-%	 	 \end{axis}
-%	 \end{tikzpicture}
-%	 \caption{test}
-%	 \label{fig:test}
-%	 \end{figure}
-%	 Die sinusförmige Wechselspannung (rot) besitzt einen Spitzenwert von $\hat{u} = \SI{29}{\volt}$.
-%	 Der dazugehörige Effektivwert (blau) liegt bei $U_\text{eff} = \SI{21}{\volt}$.
-%	 Dieser gemessene Wert lässt sich durch die Formel $U_\text{eff}=\frac{\hat{u}}{\sqrt{2}}$ auch berechnen :
-%	 $U_\text{eff}=\frac{\SI{29}{\volt}}{\sqrt{2}} = \SI{20,5}{\volt} \approx \SI{21}{\volt}$.
-%
-%\newpage
-%	 \noindent
-%	 \begin{tikzpicture}[domain=0:3.8][B]
-%	 	 \begin{axis}[
-%	 	 	 samples=100,
-%	 	 	 domain=0:10, xmax=4.5,
-%	 	 	 restrict y to domain=0:31,
-%	 	 	 axis lines=left,
-%	 	 	 axis lines=middle,
-%	 	 	 y=1cm/5.5,
-%	 	 	 x=1cm*2.5,
-%	 	 	 grid=both,
-%	 	 	 xtick={0,...,4.5},
-%	 	     	 ytick={0,10,...,30},
-%	 	     	 compat=newest,
-%	 	     	 x label style={at={(axis description cs:0.5,-0.1)},anchor=north},
-%	 	 	 y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},
-%	 	 	 xlabel={Zeit $t$ in ms},
-%	 	 	 ylabel={Spannung $U$ in V}
-%	 	 	 ]
-%	 	 	 \addplot [green,thick] {28*sin(3.141*\x r)} ;
-%	 	 	 \addplot [yellow,thick] {14};
-%	 	 	 \addplot [white] {31};
-%	 	 	 \draw [green,thick] (71.3pt,0pt)-- (142.6pt,0pt);
-%	 	 	 \draw [green,thick] (213.9pt,0pt)-- (285.2pt,0pt);
-%	 	 \end{axis}
-%	 \end{tikzpicture}  \\
-%	 Die pulsierende Gleichpannung (grün) besitzt einen Spitzenwert von $\hat{U} = \SI{28}{\volt}$.
-%	 Der dazugehörige Effektievwert (blau) liegt bei $U_\text{eff} = \SI{14}{\volt}$.
-%	 Dieser gemessene Wert lässt sich durch die Formel $U_\text{eff}=\frac{\hat{u}}{2}$ berechnen :
-%	 $U_\text{eff}=\frac{\SI{28}{\volt}}{2} = \SI{14}{\volt}$.\\
-%	 Der auftretende Verlust am Spitzenwert von
-%	 $\hat{u}_\text{ges} - \hat{U}_\text{d} = \SI{29}{\volt} -  \SI{28}{\volt} = \SI{1}{\volt}$ lässt sich durch die
-%	 Schleusenspannung $U_\text{S}$ einer Diode erklären. Erst ab \SI{0,6}{\volt} bis \SI{0,7}{\volt}
-%	 nimmt der Stomfluss stark zu, ein nennenswerter Strom fließt allerdings schon ab etwa \SI{0,4}{\volt}.\\
-%	 Die Ausgabe des Oszilloskops ist in Abbildung \ref{oszi} zu sehen.
-%\FloatBarrier
-%	\begin{figure}[b]
-%		\centering
-%		\rotatebox[origin=c]{-90}{\includegraphics[width=0.3\textwidth]{oszi.eps}}
-%		\caption{Schaubild Oszilloskop}
-%		\label{oszi}
-%	\end{figure}
-%\FloatBarrier
-%
-%\newpage
-%\noindent
-%\subsection{Zweipuls-Brücken-Gleichrichterschaltung}
-%	 Die Nachteile einer Einpuls-Einweggleichrichterschaltung sind die entstehende Brummspannung, sowie ein schlechter
-%	 Wirkungsgrad. Um diese Nachteile zu vermeiden wird meist eine Zweipuls-Brücken-Gleichrichterschaltung eingesetzt.
-%	 Bei dieser Schaltung werden vier Dioden benötigt, die wie in Abbildung \ref{fig:skizze_schaltung_2} zu sehen ist,
-%	 aufgebaut werden. Mit dieser Schaltung werden die negativen Halbwellen nicht abgeschnitten, sondern ins Positive
-%	 übertragen. Da die negativen Halbwellen, im Vergleich zur Einpuls-Einweggleichrichterschaltung, nicht abgeschnitten werden
-%	 sondern im Positiven erhalten bleiben, ist der Wirkungsgrad deutlich besser und es gibt keine Totphasen.
-%	\begin{figure}[h!]
-%		\centering
-%		\input{skizze_schaltung_2}
-%		\caption{Skizze der Zweipuls-Brücken-Gleichrichterschaltung}
-%		\label{fig:skizze_schaltung_2}
-%	\end{figure}
-%	 \FloatBarrier
-%
-%\newpage
-%	 \begin{tikzpicture}[domain=0:3.8]
-%	 	 \begin{axis}[
-%	 	 	 samples=100,
-%	 	 	 domain=0:10, xmax=4.5,
-%	 	 	 restrict y to domain=-31:31,
-%	 	 	 axis lines=left,
-%	 	 	 axis lines=middle,
-%	 	 	 y=1cm/5.5,
-%	 	 	 x=1cm*2.5,
-%	 	 	 grid=both,
-%	 	 	 xtick={0,...,4.5},
-%	 	     	 ytick={-30,-20,...,30},
-%	 	     	 compat=newest,
-%	 	     	 x label style={at={(axis description cs:0.5,-0.04)},anchor=north},
-%	 	 	 y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},
-%	 	 	 xlabel={Zeit $t$ in ms},
-%	 	 	 ylabel={Spannung $U$ in V}
-%	 	 	 ]
-%	 	 	 \addplot [red,thick] {29*sin(pi*\x r)} ;
-%	 	 	 \addplot [blue,thick] {21};
-%	 	 	 \addplot [white] {31};
-%	 	 	 \addplot [white] {-31};
-%	 	 \end{axis}
-%	 \end{tikzpicture}\\
-%	 Bei der Spannung $u_{ges}$ (rot) und der Effektivspannung $U_{\text{ges}_\text{eff}}$ (blau) gibt es bei der
-%	 Zweipuls-Brücken-Gleichrichterschaltung keinen Unterschied zur Einpuls-Einweggleich-\\richterschaltung. Der Unterschied
-%	 zwischen den beiden Schaltungen ist erst bei den Spannungen $U_{\text{d}}$ (grün) und $U_{\text{d}_\text{eff}}$ (gelb)
-%	 sichtbar. Hier ist nun, anstelle der ursprünglichen \SI{0}{\volt} Phase, eine zweite, positive, sinusförmige Halbwelle vorhanden.
-%
-%
-%\newpage
-%	 \begin{tikzpicture}[domain=0:3.8][B]
-%	 	 \begin{axis}[
-%	 	 	 samples=100,
-%	 	 	 domain=0:10, xmax=4.5,
-%	 	 	 restrict y to domain=0:31,
-%	 	 	 axis lines=left,
-%	 	 	 axis lines=middle,
-%	 	 	 y=1cm/5.5,
-%	 	 	 x=1cm*2.5,
-%	 	 	 grid=both,
-%	 	 	 xtick={0,...,4.5},
-%	 	     	 ytick={0,10,...,30},
-%	 	     	 compat=newest,
-%	 	     	 x label style={at={(axis description cs:0.5,-0.1)},anchor=north},
-%	 	 	 y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},
-%	 	 	 xlabel={Zeit $t$ in ms},
-%	 	 	 ylabel={Spannung $U$ in V}
-%	 	 	 ]
-%	 	 	 \addplot [green,thick] {28*sin(3.141*\x r)} ;
-%	 	 	 \addplot [green,thick] {28*sin(3.141*(\x+3) r)} ;
-%	 	 	 \addplot [yellow,thick] {20.506};
-%	 	 	 \addplot [white] {31};
-%	 	 \end{axis}
-%	 \end{tikzpicture}
 
 \newpage
 \section{Quellen}
