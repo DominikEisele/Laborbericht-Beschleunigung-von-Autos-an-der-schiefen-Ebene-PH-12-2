@@ -29,6 +29,7 @@
 \usepackage {graphics}
 \usepackage {graphicx}
 \usepackage{tikz}
+\usepackage{amsmath}
 
 \setlength{\headheight}{15pt}
 \pagestyle{fancy}
@@ -108,13 +109,32 @@
 
 \section{Einführung}
 	Bei dem Versuch \glqq Beschleunigung von Autos an der schiefen Ebene\grqq $ $ wurde ein Wagen auf einer geneigten Rollbahn 
-	beschleunigt und die Zeit gemessen, die der Wagen für eine bestimmte Strecke $s$ benötigt.
+	beschleunigt und die Zeit gemessen, die der Wagen für eine bestimmte Strecke $s$ benötigt.\\
+	Ziel des Versuches ist das Diagramm $t(\alpha)$ und die Endgeschwindigkeit des Wagens $v_e$.\\
+	Der  Versuch \glqq Beschleunigung von Autos an der schiefen Ebene\grqq $ $ kommt aus der Kinematik, der Lehre der Bewegung 
+	von Punkten und Körpern im Raum, beschrieben durch die Größen Position, Geschwindigkeit und Beschleunigung, ohne die 
+	Ursachen der Bewegung (Kräfte) zu betrachten.
 
 \subsection{Benötigten Formeln}
-	
-	
-\newpage
+	Beschleunigte Bewegung:
+		\begin{align*}
+			v &= a\cdot t \\
+			s &= \frac{1}{2} \cdot a \cdot t^2
+		\end{align*}
+	Arithmetischer Mittelwert:
+		\begin{align*}
+			\overline{t} &= \frac{1}{n} \sum \limits_{i=1}^n t_i 
+		\end{align*}
+	Standardabweichung:
+		\begin{align*}
+			\sigma &= \pm \sqrt{\frac{1}{1-n} \sum \limits_{i=1}^n (t_i-\overline{t})^2}
+		\end{align*}
+	Mittlere Quadratische Fehler:
+		\begin{align*}
+			\sigma_m &= \frac{\sigma}{\sqrt{n}} = \sqrt{\frac{1}{n(n-1)} \sum \limits_{i=1}^n (t_i-\overline{t})^2}
+		\end{align*}
 
+\newpage
 \section{Material und Methoden}
 
 \subsection{Material}
@@ -131,7 +151,7 @@
 	Eine Rollbahn wird durch das einseitige Unterlegen von verschieden großen Holzklötzen in eine Schräglage gebracht, 
 	wie in Abbildung \ref{fig:skizze_auto_schiefe_ebene} zu sehen ist. Ein Wagen wird am oberen Ende der Rollbahn fixiert, 
 	sodass er, nachdem er losgelassen wurde, ohne eine Anfangsgeschwindigkeit beschleunigt werden kann. Diese 
-	Beschleunigung erfährt der Wagen ausschließlich von der Erdbeschleunigung, die $9,81\frac{m}{s²}$ beträgt.
+	Beschleunigung erfährt der Wagen ausschließlich durch der Erdbeschleunigung, die $9,81\frac{m}{s²}$ beträgt.
 	\begin{figure}[h]
 		\centering
 		\input{skizze_auto_schiefe_ebene}
@@ -139,20 +159,20 @@
 		\label{fig:skizze_auto_schiefe_ebene}
 	\end{figure}
 
-
+\newpage
 \subsection{Durchführung}
 	Nachdem der Versuch aufgebaut wurde, wurde ein Wagen am oberen Ende der Rollbahn losgelassen, und die Zeit 
-	$t$ die er für die Abfahrt der Strecke $s$ benötigt gestoppt. Zusätzlich wird noch die Zeit $t$* für die halbe Strecke
-	$s_{1/2}$ genommen. Für $t$ und $t$* werden jeweils drei Messungen genommen, der Versuch wird anschließend weitere 
-	neun mal durchgeführt, wobei der Winkel $\alpha$ stetig verändert wird. Insgesammt hat man nun zehn Werte-Tripel für 
+	$t$ die er für die Abfahrt der Strecke $s=1,37m$ benötigt gestoppt. Zusätzlich wird noch die Zeit $t$* für die halbe Strecke
+	$s_{1/2}=0,61m$ genommen. Für $t$ und $t$* werden jeweils drei Messungen genommen, der Versuch wird anschließend weitere 
+	neun mal durchgeführt, wobei der Winkel $\alpha$ stetig verändert wird. Insgesamt hat man nun zehn Werte-Tripel für 
 	$t$ und $t$*.
 
 
 \section{Messwerte}
-	\begin{table}[]
+	\begin{table}
 	\centering
-		\begin{tabular}{l|l|l|l|l|l|l|l}
-			Messung 	& $\alpha$	& $t$*$_1$ 	& $t$*$_2$ 	& $t$*$_3$ 	& $t_1$ 	& $t_2$ 	& $t_3$ 	\\ \hline
+		\begin{tabular}{c|c|c|c|c|c|c|c}
+			Messung 	& $\alpha$		& $t$*$_1$ 	& $t$*$_2$ 	& $t$*$_3$ 	& $t_1$ 	& $t_2$ 	& $t_3$ 	\\ \hline
 				1 	& 1,56°		& 2,8$s$ 		&			&			& 3,1$s$	& 3,2$s$	& 3,0$s$	\\ \hline
 				2	& 2,21°		& 2,0$s$ 		&			&			& 2,5$s$	& 2,6$s$	& 2,8$s$	\\ \hline
 				3	& 2,37°		& 2,0$s$ 		&			&			& 2,0$s$	& 2,6$s$	& 2,5$s$	\\ \hline
@@ -320,6 +340,13 @@
 			\addplot [white] {31};
 		\end{axis}	
 	\end{tikzpicture}  
+
+\newpage
+\section{Quellen}
+	\begin{itemize}
+		\item www.lern-online.net/physik/mechanik/kinematik\\Upload: 21.09.2015 10:59 Uhr, Abgerufen: 17.10.2015 13:39 Uhr 
+		\item www.fersch.de/pdfdoc/Physik.pdf\\Upload: 20. August 2015, Abgerufen: 17.10.2015 13:17 Uhr
+	\end{itemize}
 	
 \end{document}
 
