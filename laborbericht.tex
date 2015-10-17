@@ -1,0 +1,332 @@
+\documentclass[a4paper,12pt,fleqn,oneside]{article}
+ \usepackage{graphicx}
+\usepackage{etex}
+\usepackage[latin1]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{ae,aecompl}
+\usepackage[T1]{fontenc}
+\usepackage{ngerman}
+\usepackage{fleqn}
+\usepackage{ulem}
+\usepackage{amssymb}
+%\usepackage[locale=DE, per-mode=fraction, quotient-mode=fraction, group-minimum-digits=6]{siunitx}
+\usepackage[locale=DE]{siunitx}
+\usepackage{tabularx}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{pictex}
+\usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=2cm,includeheadfoot]{geometry}
+\usepackage[section]{placeins}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{esvect}
+\usepackage{pgfplots}
+\usepackage[ngerman]{babel}
+\usepackage {graphics}
+\usepackage {graphicx}
+\usepackage{tikz}
+
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\fancyfoot[C]{Seite \thepage{} von \pageref{LastPage}}
+\linespread{1.5}
+\author{Dominik Eisele}
+\title{Laborbericht}
+\date{\today}
+
+
+%\begingroup\makeatletter\ifx\SetFigFontNFSS\undefined%
+%\gdef\SetFigFontNFSS#1#2#3#4#5{%
+%  \reset@font\fontsize{#1}{#2pt}%
+%  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+%  \selectfont}%
+%\fi\endgroup%
+
+
+% Zusätzliche Spalten mit variabler Breite fur tabularx
+%\newcolumntype{L}{>{\raggedright\arraybackslash}X} % linksbündig
+%\newcolumntype{C}{>{\centering\arraybackslash}X} % zentriert
+%\newcolumntype{R}{>{\raggedleft\arraybackslash}X} % rechtsbündig
+
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breitenangabe
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % rechtsbündig mit Breitenangabe
+
+
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1}
+
+
+%\renewcommand*\contentsname{Gliederung}
+
+
+\let\oldsqrt\sqrt
+\def\sqrt{\mathpalette\DHLhksqrt}
+\def\DHLhksqrt#1#2{\setbox0=\hbox{$#1\oldsqrt{#2\,}$}\dimen0=\ht0
+\advance\dimen0-0.3\ht0
+%0.3 ist das Maß für die Hakenlänge, relativ zum Inhalt der Wurzel
+\setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+{\box0\lower0.4pt\box2}}
+
+
+
+\begin{document}
+
+\begin{titlepage}
+	\begin{flushleft}
+		\vspace*{2\baselineskip}
+		{\fontsize{16}{19.2}\selectfont Laborbericht Physik TGE12/2}\\[4\baselineskip]
+		\begin{tabularx}{\textwidth}{rp{5px}X}
+			{\fontsize{16}{19.2}\selectfont Titel:}&&{\fontsize{16}{19.2}\selectfont Beschleunigung von Autos an der schiefen Ebene}
+		\end{tabularx}
+		\\[5\baselineskip]
+		\setlength{\tabcolsep}{0pt}
+		\renewcommand{\arraystretch}{1,25}
+		\begin{tabular}{lp{5px}l}
+			{\fontsize{14}{16.8}\selectfont Bearbeiter:}&&{\fontsize{14}{16.8}\selectfont Dominik Eisele{}}\\
+			{\fontsize{14}{16.8}\selectfont Mitarbeiterin:}&&{\fontsize{14}{16.8}\selectfont Jonathan Moschner}\\
+			{\fontsize{14}{16.8}\selectfont Datum Versuchsdurchführung:}&&{\fontsize{14}{16.8}\selectfont 12.10.2015}\\
+			{\fontsize{14}{16.8}\selectfont Datum Abgabe:}&&{\fontsize{14}{16.8}\selectfont 20.10.2015}
+		\end{tabular}
+		\\[2\baselineskip]
+		{\fontsize{14}{16.8}\selectfont Ich erkläre an Eides statt, den vorliegenden Laborbericht selbst angefertigt zu haben. Alle fremden Quellen wurden in diesem Laborbericht benannt.}
+		\\[2\baselineskip]
+		{\fontsize{14}{16.8}\selectfont Aichwald, \today $  $ Dominik Eisele}
+	\end{flushleft}
+\end{titlepage}
+
+\setlength{\tabcolsep}{7pt}
+\renewcommand{\arraystretch}{1,7}
+
+
+
+
+\section{Einführung}
+	Bei dem Versuch \glqq Beschleunigung von Autos an der schiefen Ebene\grqq $ $ wurde ein Wagen auf einer geneigten Rollbahn 
+	beschleunigt und die Zeit gemessen, die der Wagen für eine bestimmte Strecke $s$ benötigt.
+
+\subsection{Benötigten Formeln}
+	
+	
+\newpage
+
+\section{Material und Methoden}
+
+\subsection{Material}
+	Für den Versuch verwendete Materialien:
+	\begin{itemize}
+		\item Rollbahn
+		\item Wagen
+		\item	 analoge Handstoppuhr
+		\item Lineal
+		\item Holzklötze
+	\end{itemize}
+
+\subsection{Aufbau}
+	Eine Rollbahn wird durch das einseitige Unterlegen von verschieden großen Holzklötzen in eine Schräglage gebracht, 
+	wie in Abbildung \ref{fig:skizze_auto_schiefe_ebene} zu sehen ist. Ein Wagen wird am oberen Ende der Rollbahn fixiert, 
+	sodass er, nachdem er losgelassen wurde, ohne eine Anfangsgeschwindigkeit beschleunigt werden kann. Diese 
+	Beschleunigung erfährt der Wagen ausschließlich von der Erdbeschleunigung, die $9,81\frac{m}{s²}$ beträgt.
+	\begin{figure}[h]
+		\centering
+		\input{skizze_auto_schiefe_ebene}
+		\caption{Skizze des Versuchsaufbaus}
+		\label{fig:skizze_auto_schiefe_ebene}
+	\end{figure}
+
+
+\subsection{Durchführung}
+	Nachdem der Versuch aufgebaut wurde, wurde ein Wagen am oberen Ende der Rollbahn losgelassen, und die Zeit 
+	$t$ die er für die Abfahrt der Strecke $s$ benötigt gestoppt. Zusätzlich wird noch die Zeit $t$* für die halbe Strecke
+	$s_{1/2}$ genommen. Für $t$ und $t$* werden jeweils drei Messungen genommen, der Versuch wird anschließend weitere 
+	neun mal durchgeführt, wobei der Winkel $\alpha$ stetig verändert wird. Insgesammt hat man nun zehn Werte-Tripel für 
+	$t$ und $t$*.
+
+
+\section{Messwerte}
+	\begin{table}[]
+	\centering
+		\begin{tabular}{l|l|l|l|l|l|l|l}
+			Messung 	& $\alpha$	& $t$*$_1$ 	& $t$*$_2$ 	& $t$*$_3$ 	& $t_1$ 	& $t_2$ 	& $t_3$ 	\\ \hline
+				1 	& 1,56°		& 2,8$s$ 		&			&			& 3,1$s$	& 3,2$s$	& 3,0$s$	\\ \hline
+				2	& 2,21°		& 2,0$s$ 		&			&			& 2,5$s$	& 2,6$s$	& 2,8$s$	\\ \hline
+				3	& 2,37°		& 2,0$s$ 		&			&			& 2,0$s$	& 2,6$s$	& 2,5$s$	\\ \hline
+				4 	& 2,62°		& 1,6$s$ 		&			&			& 2,3$s$	& 2,5$s$	& 2,3$s$	\\ \hline
+				5 	& 2,87°		& 1,6$s$ 		&			&			& 2,4$s$	& 2,3$s$	& 2,4$s$	\\ \hline
+				6 	& 3,52°		& 1,2$s$ 		&			&			& 2,1$s$	& 2,2$s$	& 2,2$s$	\\ \hline
+				7 	& 3,69°		& 1,3$s$		&			&			& 2,0$s$	& 2,0$s$	& 2,2$s$	\\ \hline
+				8 	& 4,01°		& 1,5$s$		&			&			& 2,1$s$	& 2,0$s$	& 2,0$s$	\\ \hline
+				9 	& 4,92°		& 1,1$s$		&			&			& 1,3$s$	& 1,5$s$	& 1,7$s$	\\ \hline
+				10	& 5,74°		& 1,1$s$		&			&			& 1,4$s$	& 1,5$s$	& 1,5$s$
+		\end{tabular}
+	\caption{Messwerte}
+	\label{tab:Messwerte}
+	\end{table}
+
+
+
+\section{Auswertung}
+\subsection{Einpuls-Einweggleichrichterschaltung}	
+	\begin{tikzpicture}[domain=0:3.8]
+		\begin{axis}[
+			samples=100,
+			domain=0:10, xmax=4.5,
+			restrict y to domain=-31:31,
+			axis lines=left,
+			axis lines=middle,
+			y=1cm/5.5,
+			x=1cm*2.5,
+			grid=both,
+			xtick={0,...,4.5},
+		    	ytick={-30,-20,...,30},
+		    	compat=newest,
+		    	x label style={at={(axis description cs:0.5,-0.04)},anchor=north},
+			y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},	
+			xlabel={Zeit $t$ in ms},
+			ylabel={Spannung $U$ in V}
+			]  
+			\addplot [red,thick] {29*sin(3.141*\x r)} ;
+			\addplot [blue,thick] {21};
+			\addplot [white] {31};
+			\addplot [white] {-31};
+		\end{axis}	
+	\end{tikzpicture}  
+	\\
+	Die sinusförmige Wechselspannung (rot) besitzt einen Spitzenwert von $\hat{u} = \SI{29}{\volt}$. 
+	Der dazugehörige Effektivwert (blau) liegt bei $U_\text{eff} = \SI{21}{\volt}$. 
+	Dieser gemessene Wert lässt sich durch die Formel $U_\text{eff}=\frac{\hat{u}}{\sqrt{2}}$ auch berechnen :
+	$U_\text{eff}=\frac{\SI{29}{\volt}}{\sqrt{2}} = \SI{20,5}{\volt} \approx \SI{21}{\volt}$.
+
+\newpage
+	\noindent
+	\begin{tikzpicture}[domain=0:3.8][B]
+		\begin{axis}[
+			samples=100,
+			domain=0:10, xmax=4.5,
+			restrict y to domain=0:31,
+			axis lines=left,
+			axis lines=middle,
+			y=1cm/5.5,
+			x=1cm*2.5,
+			grid=both,
+			xtick={0,...,4.5},
+		    	ytick={0,10,...,30},
+		    	compat=newest,
+		    	x label style={at={(axis description cs:0.5,-0.1)},anchor=north},
+			y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},	
+			xlabel={Zeit $t$ in ms},
+			ylabel={Spannung $U$ in V}
+			]  
+			\addplot [green,thick] {28*sin(3.141*\x r)} ;
+			\addplot [yellow,thick] {14};
+			\addplot [white] {31};
+			\draw [green,thick] (71.3pt,0pt)-- (142.6pt,0pt);
+			\draw [green,thick] (213.9pt,0pt)-- (285.2pt,0pt);
+		\end{axis}
+	\end{tikzpicture}  \\
+	Die pulsierende Gleichpannung (grün) besitzt einen Spitzenwert von $\hat{U} = \SI{28}{\volt}$. 
+	Der dazugehörige Effektievwert (blau) liegt bei $U_\text{eff} = \SI{14}{\volt}$. 
+	Dieser gemessene Wert lässt sich durch die Formel $U_\text{eff}=\frac{\hat{u}}{2}$ berechnen :
+	$U_\text{eff}=\frac{\SI{28}{\volt}}{2} = \SI{14}{\volt}$.\\
+	Der auftretende Verlust am Spitzenwert von 
+	$\hat{u}_\text{ges} - \hat{U}_\text{d} = \SI{29}{\volt} -  \SI{28}{\volt} = \SI{1}{\volt}$ lässt sich durch die 
+	Schleusenspannung $U_\text{S}$ einer Diode erklären. Erst ab \SI{0,6}{\volt} bis \SI{0,7}{\volt} 
+	nimmt der Stomfluss stark zu, ein nennenswerter Strom fließt allerdings schon ab etwa \SI{0,4}{\volt}.\\
+	Die Ausgabe des Oszilloskops ist in Abbildung \ref{oszi} zu sehen.
+%\FloatBarrier
+%	\begin{figure}[b]
+%		\centering
+%		\rotatebox[origin=c]{-90}{\includegraphics[width=0.3\textwidth]{oszi.eps}}
+%		\caption{Schaubild Oszilloskop}
+%		\label{oszi}
+%	\end{figure} 
+\FloatBarrier
+
+\newpage
+\noindent
+\subsection{Zweipuls-Brücken-Gleichrichterschaltung}
+	Die Nachteile einer Einpuls-Einweggleichrichterschaltung sind die entstehende Brummspannung, sowie ein schlechter
+	Wirkungsgrad. Um diese Nachteile zu vermeiden wird meist eine Zweipuls-Brücken-Gleichrichterschaltung eingesetzt. 
+	Bei dieser Schaltung werden vier Dioden benötigt, die wie in Abbildung \ref{fig:skizze_schaltung_2} zu sehen ist, 
+	aufgebaut werden. Mit dieser Schaltung werden die negativen Halbwellen nicht abgeschnitten, sondern ins Positive 
+	übertragen. Da die negativen Halbwellen, im Vergleich zur Einpuls-Einweggleichrichterschaltung, nicht abgeschnitten werden
+	sondern im Positiven erhalten bleiben, ist der Wirkungsgrad deutlich besser und es gibt keine Totphasen.
+%	\begin{figure}[h!]
+%		\centering
+%		\input{skizze_schaltung_2}
+%		\caption{Skizze der Zweipuls-Brücken-Gleichrichterschaltung}
+%		\label{fig:skizze_schaltung_2}
+%	\end{figure}
+	\FloatBarrier
+
+\newpage	
+	\begin{tikzpicture}[domain=0:3.8]
+		\begin{axis}[
+			samples=100,
+			domain=0:10, xmax=4.5,
+			restrict y to domain=-31:31,
+			axis lines=left,
+			axis lines=middle,
+			y=1cm/5.5,
+			x=1cm*2.5,
+			grid=both,
+			xtick={0,...,4.5},
+		    	ytick={-30,-20,...,30},
+		    	compat=newest,
+		    	x label style={at={(axis description cs:0.5,-0.04)},anchor=north},
+			y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},	
+			xlabel={Zeit $t$ in ms},
+			ylabel={Spannung $U$ in V}
+			]  
+			\addplot [red,thick] {29*sin(pi*\x r)} ;
+			\addplot [blue,thick] {21};
+			\addplot [white] {31};
+			\addplot [white] {-31};
+		\end{axis}	
+	\end{tikzpicture}\\  
+	Bei der Spannung $u_{ges}$ (rot) und der Effektivspannung $U_{\text{ges}_\text{eff}}$ (blau) gibt es bei der 
+	Zweipuls-Brücken-Gleichrichterschaltung keinen Unterschied zur Einpuls-Einweggleich-\\richterschaltung. Der Unterschied 
+	zwischen den beiden Schaltungen ist erst bei den Spannungen $U_{\text{d}}$ (grün) und $U_{\text{d}_\text{eff}}$ (gelb)
+	sichtbar. Hier ist nun, anstelle der ursprünglichen \SI{0}{\volt} Phase, eine zweite, positive, sinusförmige Halbwelle vorhanden.
+	
+	
+%\newpage
+	\begin{tikzpicture}[domain=0:3.8][B]
+		\begin{axis}[
+			samples=100,
+			domain=0:10, xmax=4.5,
+			restrict y to domain=0:31,
+			axis lines=left,
+			axis lines=middle,
+			y=1cm/5.5,
+			x=1cm*2.5,
+			grid=both,
+			xtick={0,...,4.5},
+		    	ytick={0,10,...,30},
+		    	compat=newest,
+		    	x label style={at={(axis description cs:0.5,-0.1)},anchor=north},
+			y label style={at={(axis description cs:-0.2,.5)},rotate=-360,anchor=south},	
+			xlabel={Zeit $t$ in ms},
+			ylabel={Spannung $U$ in V}
+			]  
+			\addplot [green,thick] {28*sin(3.141*\x r)} ;
+			\addplot [green,thick] {28*sin(3.141*(\x+3) r)} ;
+			\addplot [yellow,thick] {20.506};
+			\addplot [white] {31};
+		\end{axis}	
+	\end{tikzpicture}  
+	
+\end{document}
+
+
+
+
+
+
+
+
