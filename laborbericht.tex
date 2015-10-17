@@ -170,10 +170,10 @@
 
 
 \section{Messwerte}
-	\begin{table}
+	\begin{table}[h]
 	\centering
 		\begin{tabular}{c|c|c|c|c|c|c|c}
-			Messung 	& $\alpha$		& $t$*$_1$ 	& $t$*$_2$ 	& $t$*$_3$ 	& $t_1$ 	& $t_2$ 	& $t_3$ 	\\ \hline
+			Messung 	& $\alpha$	& $t$*$_1$ 	& $t$*$_2$ 	& $t$*$_3$ 	& $t_1$ 	& $t_2$ 	& $t_3$ 	\\ \hline
 				1 	& 1,56°		& 2,8$s$ 		&			&			& 3,1$s$	& 3,2$s$	& 3,0$s$	\\ \hline
 				2	& 2,21°		& 2,0$s$ 		&			&			& 2,5$s$	& 2,6$s$	& 2,8$s$	\\ \hline
 				3	& 2,37°		& 2,0$s$ 		&			&			& 2,0$s$	& 2,6$s$	& 2,5$s$	\\ \hline
@@ -192,7 +192,8 @@
 
 
 \section{Auswertung}
-\subsection{Einpuls-Einweggleichrichterschaltung}	
+\subsection{Einpuls-Einweggleichrichterschaltung}
+	\begin{figure}[h]
 	\begin{tikzpicture}[domain=0:3.8]
 		\begin{axis}[
 			samples=100,
@@ -216,8 +217,10 @@
 			\addplot [white] {31};
 			\addplot [white] {-31};
 		\end{axis}	
-	\end{tikzpicture}  
-	\\
+	\end{tikzpicture}
+	\caption{test}
+	\label{fig:tset} 
+	\end{figure}
 	Die sinusförmige Wechselspannung (rot) besitzt einen Spitzenwert von $\hat{u} = \SI{29}{\volt}$. 
 	Der dazugehörige Effektivwert (blau) liegt bei $U_\text{eff} = \SI{21}{\volt}$. 
 	Dieser gemessene Wert lässt sich durch die Formel $U_\text{eff}=\frac{\hat{u}}{\sqrt{2}}$ auch berechnen :
