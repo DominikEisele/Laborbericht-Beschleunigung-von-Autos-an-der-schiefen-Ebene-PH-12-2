@@ -110,13 +110,13 @@
 
 \section{Einführung}
 	Bei dem Versuch "`Beschleunigung von Autos an der schiefen Ebene"' wurde ein Wagen auf einer geneigten Rollbahn
-	beschleunigt und die Zeit gemessen, die der Wagen für eine bestimmte Strecke $s$ benötigt.\\
+	beschleunigt, und die Zeit gemessen, die der Wagen für eine bestimmte Strecke $s$ benötigt.\\
 	Ziel des Versuches ist das Diagramm $t(\alpha)$ und die Endgeschwindigkeit des Wagens $v_e$.\\
 	Der  Versuch "`Beschleunigung von Autos an der schiefen Ebene"' kommt aus der Kinematik, der Lehre der Bewegung
 	von Punkten und Körpern im Raum, beschrieben durch die Größen Position, Geschwindigkeit und Beschleunigung, ohne die
 	Ursachen der Bewegung (Kräfte) zu betrachten.
 
-\subsection{Benötigten Formeln}
+\subsection{Formeln}
 	Beschleunigte Bewegung:
 		\begin{align}
 			\overline{v} &= \frac{s}{t}\\
@@ -165,12 +165,12 @@
 \newpage
 \subsection{Durchführung}
 	Nachdem der Versuch aufgebaut wurde, wurde der Wagen am oberen Ende der Rollbahn losgelassen, und die Zeit
-	$t$ die er für die Abfahrt der Strecke $s=\SI{1.37}{\metre}$ benötigt gestoppt. Zusätzlich wurde noch die Zeit $t^{\ast}$ für die 
+	$t$, die er, für die Abfahrt der Strecke $s=\SI{1.37}{\metre}$, benötigt gestoppt. Zusätzlich wurde noch die Zeit $t^{\ast}$ für die 
 	halbe Strecke $s_{1/2}$ genommen. Für $t$ und $t^{\ast}$ wurden jeweils drei Messungen genommen, der Versuch wurde 
 	anschließend weitere neun Mal durchgeführt, wobei der Winkel $\alpha$ für jede Messreihe verändert wurde. Insgesamt hat man 
 	nun zehn Werte-Tripel für	$t$ und $t^{\ast}$.\\
 	Um den Winkel zu berechnen wurde, an zwei unterschiedlichen Punkten der Rollbahn, die Distanz zwischen Bahn und Untergrund 
-	gemessen. Diese Messungen wurden in einem Abstand von \SI{0.7}{\metre} durchgeführt. Die Differenz der beiden Messungen ist 
+	gemessen, diese Messungen wurden in einem Abstand von \SI{0.7}{\metre} durchgeführt. Die Differenz der beiden Messungen ist 
 	somit die Gegenkathete des Winkels $\alpha$, die \SI{0.7}{\metre} sind die Hypotenuse. Daraus ergibt sich für $\alpha$ folgende 
 	Formel: \[\alpha=\arcsin(\frac{l_x-l_y}{\SI{0.7}{\metre}})\]
 
@@ -257,7 +257,7 @@
 		\node (9) at (4.92,1.50) {\textsf{x}};
 		\node (10) at (5.74,1.47) {\textsf{x}};
 		% Funktion
-		\draw[red, samples=500, domain=1.000244714:7] plot (\x, {sqrt((2*1.37)/(sin(\x )*9.81))});
+		\draw[red, samples=5000, domain=1.000244714:7] plot (\x, {sqrt((2*1.37)/(sin(\x )*9.81))});
 		%Funktionbeschriftung
 		\node (11) at (7 , 1.513887287) [below] {$t=\sqrt{\frac{2s}{\sin{(\alpha)}\cdot g}}$};	
 	\end{tikzpicture}
@@ -277,9 +277,9 @@
 		t&=\sqrt{\frac{2s}{\sin{(\alpha)}\cdot g}}
 	\end{align}
 	Aus Abbildung \ref{fig:Diagramm} ist erkennbar, dass die Messwerte, bis zu dem Winkel $\alpha=\ang{4.01}$, dem Idealverlauf
-	sehr ähnlich sind, größere Abweichungen gibt es erst ab dem Winkel $\alpha=\ang{4.92}$. Da liegt daran dass, der Wagen, 
+	sehr ähnlich sind, größere Abweichungen gibt es erst ab dem Winkel $\alpha=\ang{4.92}$. Da liegt daran, dass, der Wagen, 
 	bei einem größeren Winkel eine höhere Endgeschwindigkeit aufbaut, und somit das Erreichen des Endes der Rollbahn, für das
-	menschliche Auge, schwerer abschätzbar ist. 
+	menschliche Auge, schwer abschätzbar ist. 
 
 \newpage
 	\subsection{Geschwindigkeiten}
