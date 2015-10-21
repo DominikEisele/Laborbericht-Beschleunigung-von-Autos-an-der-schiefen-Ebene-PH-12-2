@@ -151,7 +151,7 @@
 	\end{itemize}
 
 \subsection{Aufbau}
-	Die Rollbahn wurde durch das einseitige Unterlegen von verschieden großen Holzklötzen in eine Schräglage gebracht,
+	Die Rollbahn wurde, durch das einseitige Unterlegen von verschieden großen Holzklötzen, in eine Schräglage gebracht,
 	wie in Abbildung \ref{fig:skizze_auto_schiefe_ebene} zu sehen ist. Der Wagen wurde am oberen Ende der Rollbahn fixiert,
 	sodass er, nachdem er losgelassen wurde, ohne eine Anfangsgeschwindigkeit beschleunigt werden konnte. Diese
 	Beschleunigung erfuhr der Wagen ausschließlich durch die Erdbeschleunigung, die $9,81\frac{m}{s²}$ beträgt.
@@ -171,8 +171,8 @@
 	nun zehn Werte-Tripel für	$t$ und $t^{\ast}$.\\
 	Um den Winkel zu berechnen wurde, an zwei unterschiedlichen Punkten der Rollbahn, die Distanz zwischen Bahn und Untergrund 
 	gemessen, diese Messungen wurden in einem Abstand von \SI{0.7}{\metre} durchgeführt. Die Differenz der beiden Messungen ist 
-	somit die Gegenkathete des Winkels $\alpha$, die \SI{0.7}{\metre} sind die Hypotenuse. Daraus ergibt sich für $\alpha$ folgende 
-	Formel: \[\alpha=\arcsin(\frac{l_x-l_y}{\SI{0.7}{\metre}})\]
+	somit die Gegenkathete des Winkels $\alpha$, der Abstand von zwischen den beiden Messpunkte von\SI{0.7}{\metre} ist die 
+	Hypotenuse. Daraus ergibt sich für $\alpha$ folgende Formel: \[\alpha=\arcsin(\frac{l_x-l_y}{\SI{0.7}{\metre}})\]
 
 
 \newpage
@@ -245,6 +245,10 @@
 		% Achsbeschriftung
 		\foreach \x in {,1,...,6.5} \draw (\x,0.05) -- (\x,-0.05) node [below] {\x};
 		\foreach \y in {0.5,1.0,...,3.5} \draw (0.1,\y) -- (-0.1,\y) node [left] {\y};
+		% Funktion
+		\draw[red, samples=5000, domain=1.000244714:7] plot (\x, {sqrt((2*1.37)/(sin(\x )*9.81))});
+		%Funktionbeschriftung
+		\node (11) at (7 , 1.513887287) [below] {$t=\sqrt{\frac{2s}{\sin{(\alpha)}\cdot g}}$};	
 		% Messpunkte
 		\node (1) at (1.56,3.10) {\textsf{x}};
 		\node (2) at (2.21,2.63) {\textsf{x}};
@@ -256,10 +260,6 @@
 		\node (8) at (4.01,2.03) {\textsf{x}};
 		\node (9) at (4.92,1.50) {\textsf{x}};
 		\node (10) at (5.74,1.47) {\textsf{x}};
-		% Funktion
-		\draw[red, samples=5000, domain=1.000244714:7] plot (\x, {sqrt((2*1.37)/(sin(\x )*9.81))});
-		%Funktionbeschriftung
-		\node (11) at (7 , 1.513887287) [below] {$t=\sqrt{\frac{2s}{\sin{(\alpha)}\cdot g}}$};	
 	\end{tikzpicture}
 	\caption{Diagramm: $t(\alpha)$}
 	\label{fig:Diagramm}
